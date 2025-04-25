@@ -46,9 +46,39 @@
 		<h2>Overview</h2>
 
 		In this project with Claythis, we focused on developing a robust 2D-to-3D character rendering pipeline using LoRA fine-tuning on Stable Diffusion models. We researched and implemented methods to generate high-fidelity 3D clay-style renderings from flat 2D images while preserving the original character's anatomy, pose, and expression. We curated and preprocessed datasets, tuned model parameters, and tested various training workflows using platforms like ComfyUI and RunPod. We also debugged LoRA training issues, optimized rendering quality, and ensured consistent output styles across prompts. This hands-on experience deepened our understanding of model fine-tuning, data-centric AI workflows, and the practical challenges of creative AI deployment in production environments.
-		<h2>Task: </h2>
+		<h2>Model Info</h2>
 		<p></p>
-		
+			<p><strong>Base Model:</strong> <a href="#">flux1-dev-fp8</a></p>
+			  <p><strong>LoRA:</strong> <a href="#">3dClay.safetensors</a></p>
+			  <ul>
+				<li><strong>Rank:</strong> 8</li>
+				<li><strong>Trigger Word:</strong> <code>3dClay</code></li>
+			  </ul>
+			  <p><strong>Recommended Parameters:</strong></p>
+			  <ul>
+				<li>Denoising Strength: 0.5 – 0.8</li>
+				<li>Steps: 15 – 30</li>
+				<li>Sampler: <code>ddim</code></li>
+				<li>Scheduler: <code>ddim_uniform</code></li>
+				<li>LoRA strength_model: 0.80</li>
+				<li>LoRA strength_clip: 0.80</li>
+				<li>Seed: 42</li>
+			  </ul>
+			  <p><strong>Text Prompt:</strong></p>
+			  <p>
+				<code>3dClay</code> Ultra-detailed 3D rendering, clay sculpture with subsurface scattering, physically-based materials, depth mapping, dimensional lighting with 45-degree rim light creating crisp highlights, soft ambient occlusion in shadows, volumetric atmosphere, subtle specular reflections on surface, raytraced shadows, 3D sculpting tool marks visible, studio lighting setup with three-point lighting, maintain exact facial proportions and features from original, hyper realistic texturing, octane render quality, NO additional elements, NO random artifacts, NO texture glitches, clean background, preserve original image composition, EXACT SAME character features.
+			  </p>
+			  <p><strong>Additional Models:</strong></p>
+			  <ul>
+				<li><a href="#">clip_name1: t5xxl_fp_8_e5m3fn.safetensors</a></li>
+				<li><a href="#">clip_name2: clip_l.safetensors</a></li>
+				<li><a href="#">VAE: ae.safetensors</a></li>
+			  </ul>
+			  <p><strong>Workflow (ComfyUI):</strong> <a href="#">3dClayWorkflow.json</a></p>
+			</div>
+			<div class="image-content">
+			  <img src="Screenshot-2025-04-25.png" alt="Model Workflow and Render Result">
+			</div>
 
 		<p></p>
 
